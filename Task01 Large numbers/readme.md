@@ -1,8 +1,7 @@
-# TASK
-## №1. Large numbers
+# TASK №1. Large numbers
 
 <hr>
-## Особливості
+Особливості
 
 - чистий код
 - коментарі
