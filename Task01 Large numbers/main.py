@@ -1,13 +1,31 @@
 # @author Borusov Illia
-# @Version 0.2
+# @Version 0.3
 import random
-import datetime
+import time
+
+# Brut-force key
+# @param key generation in a range
+# @return brut_force_key with the previous value of the found key
+# @return duration time finding the key
+def brute_force(key): 
+    start = time.perf_counter_ns()
+    brute_force_key = 0
+    while True:
+        if (brute_force_key != key):
+            brute_force_key=brute_force_key+1
+        else: 
+            print("Brute-force key: ", brute_force_key) 
+            duration = time.perf_counter_ns() - start
+            print(f"The key was found in {duration // 1000000}ms.\n")
+            break
 
 # Key generation in a range
 # @param bits_range bit range
 # @return key generated in a specific range
 def generate(bits_range): 
-    print("Key: ", random.randint(0, bits_range),"\n")
+    key = random.randint(0, bits_range)
+    print("Key: ", key)
+    brute_force(key-1)
    
 # Output number of key variants
 # @param bits given bit rates
@@ -23,9 +41,5 @@ def main():
     bits = [8,16,32,64,128,256,512,1024,2048,4096]
     print_options(bits)
 
-main()
-
-# Code snippet to show code execution time
-# start = datetime.datetime.now()
-# end = datetime.datetime.now()
-# print('totally time is ', end - start, '\n')
+if __name__ == "__main__":
+    main()
