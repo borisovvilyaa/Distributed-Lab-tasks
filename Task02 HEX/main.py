@@ -1,24 +1,42 @@
 import binascii
-import sys
 
+# Creates a 16-bit number with the desired length
+# @param hex number, which we will set the desired length
+# @param size number length
+# @return hex а number with a given length 
+def lengthGauge(hex, size):
+    padding_size = 2 * size
+    hex = hex + "0" * (padding_size - len(hex))
+    return hex
 
-def pad(mystr, size):
-  padding_size=2*size
-  mystr = mystr + "0"*(padding_size - len(mystr))
-  return mystr
+# Conversion from numbers to hex
+# @param littleEndian the number that we transform to hex
+# @param bigEndian the number that we transform to hex
+# @return littleEndian, bigEndian numbers in hex
+def generateHex(littleEndian, bigEndian, size):
+    littleEndianToHex = lengthGauge(hex(littleEndian).split("x")[-1], size)
+    BigEndianToHex = lengthGauge(hex(bigEndian).split("x")[-1], size)
+    print(f"Little-endian to HEX: 0x{littleEndianToHex}\nBig-endian to HEX: 0x{BigEndianToHex}")
 
-def generate(a, size):
-    a=pad(a[:2*size], size)
-    a1=int.from_bytes(binascii.unhexlify(a),byteorder='little')
-    a2=int.from_bytes(binascii.unhexlify(a),byteorder='big')
-    print(f"Value: 0x{a}\nNumber of bytes: {size}\nLittle-endian: {a1}\nBig-endian: {a2}")
-    print("-*"*20,"\n")
+# Converter with hex to Big-endian and Little-endian
+# @param hexItem which was generated before
+# @param size number length
+# @return littleEndian, bigEndian numbers
+def generate(hexItem, size):
+    hexItem = lengthGauge(hexItem[: 2 * size], size)
+    littleEndian = int.from_bytes(binascii.unhexlify(hexItem), byteorder="little")
+    bigEndian = int.from_bytes(binascii.unhexlify(hexItem), byteorder="big")
+    print(f"Value: 0x{hexItem}\nNumber of bytes: {size}\nHEX to Little-endian: {littleEndian}\nHEX to Big-endian: {bigEndian}")
+    # print(f"Little-endian To hex: 0x{hexItem} \n Big-endian To hex: 0x{hexItem}")
+    generateHex(littleEndian, bigEndian, size)
+    print("-*" * 20, "\n")
 
-def main(): 
-    a= ["ff", "aaaa", "FFFFFFFF", "F"]
-    size= [32, 32, 4, 512]
-    for i in range (len(a)):
-        generate(a[i], size[i])
+# entry point
+def main():
+    hexItem = ["ff", "aaaa", "ffffffff", "f"]
+    size = [32, 32, 4, 512]
+    for i in range(len(hexItem)):
+        generate(hexItem[i], size[i])
 
 
 if __name__ == "__main__":
