@@ -1,4 +1,4 @@
-# TASK №2. SHA-1
+# TASK №3. SHA-1
 
 ## Посилання на матеріали, які були викроставані
 - <a href="https://brilliant.org/wiki/secure-hashing-algorithms/">Secure Hash Algorithms</a>
