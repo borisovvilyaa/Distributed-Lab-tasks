@@ -1,5 +1,8 @@
 # TASK №3. SHA-1
 
+##Особливості
+- Особливостей немає
+
 ## Посилання на матеріали, які були викроставані
 - <a href="https://brilliant.org/wiki/secure-hashing-algorithms/">Secure Hash Algorithms</a>
 - <a href="https://justcryptography.com/sha-1/">What is the Secure Hash Algorithm 1 (SHA-1)?</a>
