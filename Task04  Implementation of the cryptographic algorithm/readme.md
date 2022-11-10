@@ -5,8 +5,7 @@
 
 ## Посилання
 
-<a href="https://github.com/awnonbhowmik/RSA-Python" _target>RSA-Python</a> // p.s.: код з нього не брав, але цей репо дав мені псевдокод 
-
+<a href="https://github.com/awnonbhowmik/RSA-Python" _target>RSA-Python</a> 
 <a href="https://justcryptography.com/vigenere-cipher-python-implementation/" _target>The Vigenère cipher</a>
 
 
