@@ -28,16 +28,26 @@
 Дерикторії та файли
 
 .
-├── blockchain -> core всього проєкту
+├── blockchain -> core всього проєкту 
+
 │   ├── Account.py
+
 │   ├── Blockchain.py
+
 │   ├── Block.py
+
 │   ├── Hash.py
+
 │   ├── KeyPair.py
+
 │   ├── Operation.py
+
 │   ├── Signature.py
+
 │   └── Transaction.py
+
 ├── main.py -> оброботка/тестування/вивід інформації
+
 └── readme.md
 
 
