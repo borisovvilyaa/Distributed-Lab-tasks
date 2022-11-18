@@ -1,17 +1,21 @@
-from random import randint
+from Hash import Hash
 
 class KeyPair:
-    def __init__(self) -> None:
-        pass
+
+    def toString(text):
+        return str(text)
 
     #use SHA-3
     #@param message -> whose will be generete key
     #@return hash massage
-    def genKeyPair():
-        generate = randint(0, 10)
-        return generate
+    def genKeyPair(data):
+        privateKey = Hash.toSHA1(KeyPair.toString(data))
+        publicKey = Hash.toSHA1(KeyPair.toString(privateKey)) # In this way, we do 2-time hashing for security purposes.
+        return privateKey, publicKey
 
     #Print key 
     #@param key massage
-    def printKeyPair(key):
-        print(f"Key: {key}")
+    def printKeyPair(privateKey, publicKey):
+        print(f"privateKey: {privateKey}\npublicKey: {publicKey}")
+        
+
