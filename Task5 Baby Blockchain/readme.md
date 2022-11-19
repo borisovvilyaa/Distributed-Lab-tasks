@@ -77,7 +77,7 @@
 ---
 ## Обмеження
 
-Обмежень не має
+На першому етапі розробки буде лише один токен. Тобто моя вигадана  
 
 ---
 ![Python](https://img.shields.io/badge/-Python-090909?style=for-the-badge&logo=Python) ![Javascript](https://img.shields.io/badge/-Javascript-090909?style=for-the-badge&logo=Javascript) ![blockchain](https://img.shields.io/badge/-blockchain-090909?style=for-the-badge&logo=blockchain) ![OOP](https://img.shields.io/badge/-OOP-090909?style=for-the-badge&logo=OOP) 
