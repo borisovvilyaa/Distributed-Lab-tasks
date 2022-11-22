@@ -9,7 +9,7 @@ class KeyPair:
     #@param message -> whose will be generete key
     #@return hash massage
     def genKeyPair(data):
-        privateKey = Hash.toSHA1(KeyPair.toString(data))
+        privateKey = Hash.toSHA1(KeyPair.toString(Hash.toSHA1(KeyPair.toString(data))))
         publicKey = Hash.toSHA1(KeyPair.toString(privateKey)) # In this way, we do 2-time hashing for security purposes.
         return privateKey, publicKey
 
