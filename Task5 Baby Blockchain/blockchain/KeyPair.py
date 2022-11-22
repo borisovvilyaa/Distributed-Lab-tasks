@@ -10,7 +10,7 @@ class KeyPair:
     #@return hash massage
     def genKeyPair(data):
         privateKey = Hash.toSHA1(KeyPair.toString(Hash.toSHA1(KeyPair.toString(data))))
-        publicKey = Hash.toSHA1(KeyPair.toString(privateKey)) # In this way, we do 2-time hashing for security purposes.
+        publicKey = Hash.toSHA1(KeyPair.toString(data)) # In this way, we do 2-time hashing for security purposes.
         return privateKey, publicKey
 
     #Print key 
