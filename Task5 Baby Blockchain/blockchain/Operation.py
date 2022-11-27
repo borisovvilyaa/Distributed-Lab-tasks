@@ -24,20 +24,18 @@ class Operation:
             print("Error #1")
             print(Account.getBalanceFunc(self.sender), self.amount)
 
-# print("[alert]Create new transaction")
-# mount = 5
-# сommission = mount*0.05
-# senderPub = "ab6fa35427acf3a55a47284eec6e8702a1226c6d"
-# sender =  Hash.toSHA1("ab6fa35427acf3a55a47284eec6e8702a1226c6d")
-# receiver = "86460d9f38e774e3966bc19459634fa7e0e91bd6"
+print("[alert]Create new transaction")
+mount = 5
+сommission = mount*0.05
+senderPub = "ab6fa35427acf3a55a47284eec6e8702a1226c6d"
+sender =  Hash.toSHA1("ab6fa35427acf3a55a47284eec6e8702a1226c6d")
+receiver = "86460d9f38e774e3966bc19459634fa7e0e91bd6"
 
-# transaction = Signature.signData(sender, mount, сommission)
-# print(transaction)
+transaction = Signature.signData(sender, mount, сommission)
 
+signature = Signature.verifySignature(senderPub, mount, transaction, сommission)
 
-# print(Signature.verifySignature(senderPub, mount, transaction, сommission))
-# signature = Signature.verifySignature(senderPub, mount, transaction, сommission)
+operation = Operation(senderPub, receiver, mount, signature)
+operation.printOperation()
 
-# operation = Operation(senderPub, receiver, mount, signature)
-# operation.printOperation()
-# operation.verifyOperation()  
+operation.verifyOperation()  
