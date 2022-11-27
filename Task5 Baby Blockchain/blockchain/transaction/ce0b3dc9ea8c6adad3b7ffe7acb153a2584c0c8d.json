@@ -1,0 +1,1 @@
+{"version": 1, "time": "2022-11-26T12:29:01.212338", "vin": [{"hash": "ce0b3dc9ea8c6adad3b7ffe7acb153a2584c0c8d", "index": 0, "scriptSig": "True"}], "vout": [{"value": 10, "scriptPubKey": "5fe7c09a8b3a3a45706403fafa8c174d83fa0ec8"}, {"value": 10.5, "scriptPubKey": "5fe7c09a8b3a3a45706403fafa8c174d83fa0ec8"}]}

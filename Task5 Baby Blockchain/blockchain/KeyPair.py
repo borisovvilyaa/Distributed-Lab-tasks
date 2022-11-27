@@ -16,6 +16,8 @@ class KeyPair:
     #Print key 
     #@param key massage
     def printKeyPair(privateKey, publicKey):
-        print(f"privateKey: {privateKey}\npublicKey: {publicKey}")
+        print(f"[*]privateKey: {privateKey}\n[*]publicKey: {publicKey}")
         
+
+
 
